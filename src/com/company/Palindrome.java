@@ -4,8 +4,10 @@ import java.util.Locale;
 
 /**
  * Here is 3 different possible way to find palindrome
- *
- *
+ * V1 use StringBuilder class. its easy to use, but not the best variant
+ * V2 not so good. use to many Memory
+ * V3 much better
+ * not forget about using preparation before check String on isPolindrome
  */
 
 public class Palindrome {
