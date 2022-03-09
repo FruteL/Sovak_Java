@@ -9,7 +9,6 @@ package com.company;
  *      The value 0 means that the limit is not set.
  */
 public class Sin {
-    // todo - сделать норм функцию, что принимает параметры
     public static void main(String[] args){
         System.out.println(calcIntegralSin(10, 0, Math.PI, 0.9));
     }
