@@ -33,10 +33,14 @@ public class ReadHarry {
 //            System.out.println(uniq[i]);
 //        }
 
-        String[] startByC = getWordsByLetter("c", uniq);
-        for (int i = 0; i < startByC.length; i++) {
-            System.out.println(startByC[i]);
-        }
+//        String[] startByC = getWordsByLetter("c", uniq);
+//        for (int i = 0; i < startByC.length; i++) {
+//            System.out.println(startByC[i]);
+//        }
+
+        String [] hash = getHashes(words);
+        System.out.println(uniq.length);
+        System.out.println("Количество пересечений = " + (words.length - hash.length));
 
 
     }
@@ -99,16 +103,27 @@ public class ReadHarry {
         return newString.split(" ");
     }
 
-    public static int countLinesWithWord(String words, String[] text){
+    public static int countLinesWithWord(String word, String[] text){
         int counter = 0;
         for (int i = 0; i < text.length; i++) {
-            if (text[i].contains(words)){
+            if (text[i].contains(word)){
                 counter +=1;
             }
         }
 
-
         return counter;
+    }
+
+    public static String[] getHashes(String[] words){
+        String uniqHash = "";
+        for (int i = 0; i < words.length; i++) {
+            if (!uniqHash.contains(Integer.toString(words[i].hashCode()))){
+                uniqHash += Integer.toString(words[i].hashCode()) + " ";
+            }
+        }
+        String[] uniqArray = uniqHash.split(" ");
+
+        return uniqArray;
     }
 
 

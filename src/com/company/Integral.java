@@ -8,7 +8,7 @@ package com.company;
  *      BlockY - is responsible for limiting the Y-axis (from zero to the specified value).
  *      The value 0 means that the limit is not set.
  */
-public class Sin {
+public class Integral {
     public static void main(String[] args){
         System.out.println(calcIntegralSin(10, 0, Math.PI, 0.9));
     }
